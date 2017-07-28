@@ -50,7 +50,12 @@ public class NavidBot extends Robot {
 
         //out.println("gun heading: " + getGunHeading());
         myTurnGun(absoluteBearing - getGunHeading() );
-        fire(3);
+
+        //out.print("distance to target " + targetDist);
+        if( targetDist < 170 ) {
+            fire(5);
+        }
+        else fire(3);
     }
 
 
